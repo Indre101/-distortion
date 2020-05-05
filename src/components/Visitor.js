@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import { ReactComponent as ReactLogo } from "../images/speed-1.svg";
+import { ReactComponent as ReactLogo } from "../static/images/speed-1.svg";
 
 export default function Visitor(props) {
   const bar = useRef(null);
@@ -24,7 +24,7 @@ export default function Visitor(props) {
         </div>
         <div className="gifContainer" style={{ display: showGif }}>
           <h1>Run there's too many people!</h1>
-          <img src={require("../images/exp.gif")} alt="Bye" />
+          <img src={require("../static/images/exp.gif")} alt="Bye" />
         </div>
       </div>
     </div>
