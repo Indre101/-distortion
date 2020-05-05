@@ -55,8 +55,44 @@ svg {
   align-items: center;
 }
 
-.numbers div {
+.numbers .count {
   border: 1px solid black;
   font-size: 1.5rem;
   padding: 5px;
+  height: 30px;
+  width: 30px;
+  text-align: right;
+}
+.gifContainer {
+  position: absolute;
+}
+
+img {
+  height: 70vh;
+}
+
+#one,
+#two,
+#three {
+  fill: yellow;
+}
+
+#four,
+#five,
+#six {
+  fill: yellowgreen;
+}
+#seven,
+#eight,
+#nine {
+  fill: green;
+}
+#ten,
+#eleven {
+  fill: orange;
+}
+
+#twelve,
+#thirteen {
+  fill: red;
 }

@@ -9,6 +9,8 @@ export default function Visitor(props) {
     bar.current.style.setProperty("--rotation", -110 + R);
   }, [props]);
 
+  const showGif = props.count.inQueue >= 24 ? "block" : "none";
+
   return (
     <div className="container">
       <div ref={bar} className="visitor">
@@ -17,6 +19,10 @@ export default function Visitor(props) {
       </div>
       <div className="numbers">
         <div className="count">{props.count.inQueue}</div>
+        <div className="gifContainer" style={{ display: showGif }}>
+          <h1>Run there's too many people!</h1>
+          <img src={require("../images/exp.gif")} alt="Bye" />
+        </div>
       </div>
     </div>
   );
