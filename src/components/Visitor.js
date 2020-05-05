@@ -10,9 +10,14 @@ export default function Visitor(props) {
   }, [props]);
 
   return (
-    <div ref={bar} className="visitor">
-      <ReactLogo />
-      <div className="needle"></div>
+    <div className="container">
+      <div ref={bar} className="visitor">
+        <ReactLogo />
+        <div className="needle"></div>
+      </div>
+      <div className="numbers">
+        <div className="count">{props.count.inQueue}</div>
+      </div>
     </div>
   );
 }

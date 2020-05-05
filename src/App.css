@@ -8,7 +8,7 @@
 .visitor {
   --rotation: -110;
   /* height: calc(1px * var(--height)); */
-  height: 300px;
+  height: 217px;
   width: 300px;
   display: flex;
   justify-content: center;
@@ -47,4 +47,16 @@ svg {
   position: absolute;
   width: inherit;
   height: inherit;
+}
+
+.numbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.numbers div {
+  border: 1px solid black;
+  font-size: 1.5rem;
+  padding: 5px;
 }
