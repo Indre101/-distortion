@@ -4,3 +4,8 @@
   align-items: center;
   height: 100vh;
 }
+
+.visitor {
+  --height: 0;
+  height: calc(1px * var(--height));
+}

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
+import Visitor from "./components/Visitor";
 
 function App() {
   const [count, setCount] = useState([]);
@@ -7,12 +8,16 @@ function App() {
   useEffect(() => {
     const intervalId = setInterval(() => {
       getData(setCount);
-    }, 10000);
+    }, 2000);
 
     return () => clearInterval(intervalId);
   }, []);
 
-  return <div className="App">hi</div>;
+  return (
+    <div className="App">
+      <Visitor count={count} />
+    </div>
+  );
 }
 
 export default App;
