@@ -5,7 +5,9 @@ export default function Visitor(props) {
   const bar = useRef(null);
 
   useEffect(() => {
-    const R = props.count !== undefined ? rotation(props.count.inQueue) : -110;
+    const R =
+      props.count.inQueue !== undefined ? rotation(props.count.inQueue) : 0;
+    console.log(R);
     bar.current.style.setProperty("--rotation", -110 + R);
   }, [props]);
 
@@ -18,7 +20,9 @@ export default function Visitor(props) {
         <div className="needle"></div>
       </div>
       <div className="numbers">
-        <div className="count">{props.count.inQueue}</div>
+        <div className="count">
+          {props.count.inQueue ? props.count.inQueue : 0}
+        </div>
         <div className="gifContainer" style={{ display: showGif }}>
           <h1>Run there's too many people!</h1>
           <img src={require("../images/exp.gif")} alt="Bye" />
