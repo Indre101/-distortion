@@ -6,13 +6,24 @@
 }
 
 .visitor {
-  --height: 0;
+  --rotation: -110;
   /* height: calc(1px * var(--height)); */
   height: 300px;
   width: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.needle {
+  transform: rotate(calc(var(--rotation) * 1deg));
+  width: 20px;
+  height: 100px;
+  background-color: red;
+  position: absolute;
+  clip-path: polygon(50% 0, 0 100%, 100% 100%);
+  transform-origin: bottom center;
+  transition: transform 0.3s ease-in-out;
 }
 
 .Speedometer {
@@ -24,27 +35,14 @@
   grid-template-rows: 3;
 }
 
-.bar:nth-of-type(even) {
-  background-color: red;
-}
-
 path {
   fill: white;
   stroke: black;
 }
 #arrow {
-  fill: black;
-  transform-origin: bottom;
   display: none;
 }
 
-.needle {
-  width: 20px;
-  height: 100px;
-  background-color: red;
-  position: absolute;
-  transform-origin: bottom center;
-}
 svg {
   position: absolute;
   width: inherit;

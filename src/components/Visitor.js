@@ -5,11 +5,8 @@ export default function Visitor(props) {
   const bar = useRef(null);
 
   useEffect(() => {
-    // const height = props.count ? props.count.inQueue : 0;
-    // bar.current.style.setProperty("--height", height);
-    // bar.current.style.background = "red";
-    // bar.current.style.width = "20px";
-    return () => {};
+    const R = props.count !== undefined ? rotation(props.count.inQueue) : -110;
+    bar.current.style.setProperty("--rotation", -110 + R);
   }, [props]);
 
   return (
@@ -18,4 +15,9 @@ export default function Visitor(props) {
       <div className="needle"></div>
     </div>
   );
+}
+
+function rotation(count) {
+  const rotate = (count * 930) / 100;
+  return rotate;
 }
