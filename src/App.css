@@ -7,5 +7,46 @@
 
 .visitor {
   --height: 0;
-  height: calc(1px * var(--height));
+  /* height: calc(1px * var(--height)); */
+  height: 300px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Speedometer {
+  background-color: black;
+  height: 400px;
+  width: 700px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 3;
+}
+
+.bar:nth-of-type(even) {
+  background-color: red;
+}
+
+path {
+  fill: white;
+  stroke: black;
+}
+#arrow {
+  fill: black;
+  transform-origin: bottom;
+  display: none;
+}
+
+.needle {
+  width: 20px;
+  height: 100px;
+  background-color: red;
+  position: absolute;
+  transform-origin: bottom center;
+}
+svg {
+  position: absolute;
+  width: inherit;
+  height: inherit;
 }
