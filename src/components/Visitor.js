@@ -7,7 +7,6 @@ export default function Visitor(props) {
   useEffect(() => {
     const R =
       props.count.inQueue !== undefined ? rotation(props.count.inQueue) : 0;
-    console.log(R);
     bar.current.style.setProperty("--rotation", -110 + R);
   }, [props]);
 

@@ -15,7 +15,11 @@ function App() {
 
   return (
     <div className="App">
-      <Visitor count={count} />
+      <div>
+        <h1>Students in the que </h1>
+
+        <Visitor count={count} />
+      </div>
     </div>
   );
 }

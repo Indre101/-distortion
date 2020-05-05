@@ -1,15 +1,26 @@
 .App {
+  height: 100vh;
+  background-image: url(./images/bg.jpg);
+  background-size: cover;
+}
+
+.App > div {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  flex-direction: column;
+  background-color: #ffffffc2;
+}
+
+.App > div > h1 {
+  transform: translateY(220px);
 }
 
 .visitor {
   --rotation: -110;
   /* height: calc(1px * var(--height)); */
-  height: 217px;
-  width: 300px;
+  width: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,7 +29,7 @@
 .needle {
   transform: rotate(calc(var(--rotation) * 1deg));
   width: 20px;
-  height: 100px;
+  height: 200px;
   background-color: red;
   position: absolute;
   clip-path: polygon(50% 0, 0 100%, 100% 100%);
@@ -26,19 +37,6 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.Speedometer {
-  background-color: black;
-  height: 400px;
-  width: 700px;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 3;
-}
-
-path {
-  fill: white;
-  stroke: black;
-}
 #arrow {
   display: none;
 }
@@ -62,6 +60,7 @@ svg {
   height: 30px;
   width: 30px;
   text-align: right;
+  transform: translateY(230px);
 }
 .gifContainer {
   position: absolute;
